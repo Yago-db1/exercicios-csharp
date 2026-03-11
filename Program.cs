@@ -3,29 +3,24 @@
 using System.Globalization;
 CultureInfo.DefaultThreadCurrentCulture = CultureInfo.InvariantCulture;
 CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.InvariantCulture;
-
-// Entrada do peso do usuário
-Console.WriteLine("Digite seu peso (kg): ");
-double peso = Convert.ToDouble(Console.ReadLine()!);
-
-//Verificação para peso negativo ou zero
-if(peso <= 0)
-{
-    Console.WriteLine("Digite um peso maior que zero");
-    return;
-}
-
-// Entrada da altura do usuário
-Console.WriteLine("Digite sua altura (m): ");
-double altura = double.Parse(Console.ReadLine()!);
-
-// Verificação para alturas negativas ou zero
-if(altura <= 0)
-{
-    Console.WriteLine("Digite uma altura maior que zero");
-    return;
-}
-
+// Entrada do peso e altura do usuario. 
+double peso = LerEntradaUsuario("Digite o seu peso (kg): ");
+double altura = LerEntradaUsuario("Digite a sua altura(m): ");
 // Calculo do IMC
-double imc = peso / (altura*altura);
+double imc = peso / (altura * altura);
 Console.WriteLine($"Seu IMC é: {imc:F2} ");
+// Método para validar a entrada do usuário
+double LerEntradaUsuario(string mensagem)
+{
+    double valor;
+    while (true)
+    {
+        Console.Write(mensagem);
+        string entradaUsuario = Console.ReadLine()!;
+        if (double.TryParse(entradaUsuario, out valor) && valor > 0)
+        {
+            return valor;
+        }
+        Console.WriteLine("Digite um valor maior que zero");
+    }
+}
