@@ -1,26 +1,33 @@
-﻿//Exercício 1: Calculadora de IMC (Índice de Massa Corporal)
-// importação para utilização de ponto em vez de virgula.
-using System.Globalization;
+﻿using System.Globalization;
 CultureInfo.DefaultThreadCurrentCulture = CultureInfo.InvariantCulture;
 CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.InvariantCulture;
-// Entrada do peso e altura do usuario. 
-double peso = LerEntradaUsuario("Digite o seu peso (kg): ");
-double altura = LerEntradaUsuario("Digite a sua altura(m): ");
-// Calculo do IMC
-double imc = peso / (altura * altura);
-Console.WriteLine($"Seu IMC é: {imc:F2} ");
-// Método para validar a entrada do usuário
-double LerEntradaUsuario(string mensagem)
+Console.Clear();
+Console.WriteLine("=== MENU ===");
+Console.WriteLine("1 - Calculadora de IMC (Índice de Massa Corporal)");
+Console.WriteLine("2 - Para sair");
+Console.Write("Digite uma opção: ");
+int opcaoMenu = ValidarEntradaUsuario();
+switch (opcaoMenu)
 {
-    double valor;
+    case 1:
+        exercicios.Exercicio1.Executar();
+        break;
+    case 2:
+        Console.WriteLine("Saindo...");
+        return;
+}
+int ValidarEntradaUsuario()
+{
+    int opcao;
     while (true)
     {
-        Console.Write(mensagem);
         string entradaUsuario = Console.ReadLine()!;
-        if (double.TryParse(entradaUsuario, out valor) && valor > 0)
+
+        if (int.TryParse(entradaUsuario, out opcao) && opcao >= 1 && opcao <= 2)
         {
-            return valor;
+            return opcao;
         }
-        Console.WriteLine("Digite um valor maior que zero");
+
+        Console.Write("Digite uma opção válida (1 ou 2): ");
     }
 }
