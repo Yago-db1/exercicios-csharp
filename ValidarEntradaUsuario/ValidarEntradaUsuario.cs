@@ -20,11 +20,11 @@ public class ValidarEntradaUsuario
         while (true)
         {
             string entradaUsuario = Console.ReadLine()!;
-            if (int.TryParse(entradaUsuario, out int opcao) && opcao >= 1 && opcao <= 2)
+            if (int.TryParse(entradaUsuario, out int opcao) && opcao >= 1 && opcao <= 3)
             {
                 return opcao;
             }
-            Console.Write("Digite uma opção válida (1 ou 2): ");
+            Console.Write("Digite uma opção válida (1,2 ou 3): ");
         }
     }
 }
