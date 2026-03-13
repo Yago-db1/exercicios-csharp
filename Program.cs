@@ -11,10 +11,10 @@ int opcaoMenu = exercicios.ValidarEntradaUsuario.LerOpcaoMenuPrincipal();
 switch (opcaoMenu)
 {
     case 1:
-        exercicios.Exercicio1.Executar();
+        exercicios.Exercicio1.CalcularImc();
         break;
     case 2:
-        exercicios.Exercicio2.Executar();
+        exercicios.Exercicio2.ClassificarImc();
         break;
     case 3:
         Console.WriteLine("Saindo...");

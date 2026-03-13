@@ -2,9 +2,9 @@
 
 public class Exercicio2
 {
-    public static void Executar()
+    public static void ClassificarImc()
     {
-        decimal imc = Exercicio1.Executar();
+        var imc = Exercicio1.CalcularImc();
         string classificacaoIMC = imc switch
         {
             < 18.5m => "Abaixo do peso",

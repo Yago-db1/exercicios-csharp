@@ -2,7 +2,7 @@ namespace exercicios;
 
 public class Exercicio1
 {
-    public static decimal Executar()
+    public static decimal CalcularImc()
     {
         Console.Clear();
         Console.WriteLine("Bem vindo a Calculadora de IMC");
