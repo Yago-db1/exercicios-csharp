@@ -6,7 +6,7 @@ public class Exercicio3
     {
         OpcoesMenu.ExibirMenuCalculadora();
         int opcaoCalculadora = ValidarEntradaUsuario.LerOpcaoMenuCalculadora();
-        while (opcaoCalculadora !=5)
+        while (opcaoCalculadora != 5)
         {
             Console.Write("Digite o primeiro número: ");
             decimal numero1 = ValidarEntradaUsuario.LerNumeroCalculadora();
@@ -25,7 +25,15 @@ public class Exercicio3
                     resultado = OperacoesCalculadora.Multiplicar(numero1, numero2);
                     break;
                 case 4:
-                    resultado = OperacoesCalculadora.Dividir(numero1, numero2);
+                    try
+                    {
+                        resultado = OperacoesCalculadora.Dividir(numero1, numero2);
+                    }
+                    catch (DivideByZeroException erro)
+                    {
+                        Console.WriteLine(erro.Message);
+                        continue;
+                    }
                     break;
             }
             Console.WriteLine($"Resultado: {resultado}");
