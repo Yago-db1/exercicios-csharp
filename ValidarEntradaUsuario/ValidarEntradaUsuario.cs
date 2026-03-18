@@ -20,11 +20,11 @@ public class ValidarEntradaUsuario
         while (true)
         {
             string entradaUsuario = Console.ReadLine()!;
-            if (int.TryParse(entradaUsuario, out int opcao) && opcao >= 1 && opcao <= 4)
+            if (int.TryParse(entradaUsuario, out int opcao) && opcao >= 1 && opcao <= 5)
             {
                 return opcao;
             }
-            Console.Write("Digite uma opção válida (1, 2 , 3 ou 4): ");
+            Console.Write("Digite uma opção válida (1 a 5): ");
         }
     }
     public static int LerOpcaoMenuCalculadora()
@@ -49,6 +49,30 @@ public class ValidarEntradaUsuario
                 return opcao;
             }
             Console.Write("Digite um valor númerico: ");
+        }
+    }
+    public static int LerQuantidadeDeAlunos()
+    {
+        while (true)
+        {
+            string entradaUsuario = Console.ReadLine()!;
+            if (int.TryParse(entradaUsuario, out int opcao) && opcao > 0)
+            {
+                return opcao;
+            }
+            Console.Write("Digite um valor númerico inteiro: ");
+        }
+    }
+    public static decimal LerNotaAluno()
+    {
+        while (true)
+        {
+            string entradaUsuario = Console.ReadLine()!;
+            if (decimal.TryParse(entradaUsuario, out decimal opcao) && opcao >= 0 && opcao <= 10)
+            {
+                return opcao;
+            }
+            Console.Write("Digite uma nota entre 0 e 10: ");
         }
     }
 }

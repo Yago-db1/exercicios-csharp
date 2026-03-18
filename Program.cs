@@ -4,19 +4,22 @@ CultureInfo.DefaultThreadCurrentCulture = CultureInfo.InvariantCulture;
 CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.InvariantCulture;
 
 OpcoesMenu.ExibirMenuPrincipal();
-int opcaoMenu = exercicios.ValidarEntradaUsuario.LerOpcaoMenuPrincipal();
+int opcaoMenu = ValidarEntradaUsuario.LerOpcaoMenuPrincipal();
 switch (opcaoMenu)
 {
     case 1:
-        exercicios.Exercicio1.CalcularImc();
+        Exercicio1.CalcularImc();
         break;
     case 2:
-        exercicios.Exercicio2.ClassificarImc();
+        Exercicio2.ClassificarImc();
         break;
     case 3:
-        exercicios.Exercicio3.Calculadora();
+        Exercicio3.Calculadora();
         break;
     case 4:
+        Exercicio4.NotaAluno();
+        break;
+    case 5:
         Console.WriteLine("Saindo...");
-        return;
+        break;
 }
