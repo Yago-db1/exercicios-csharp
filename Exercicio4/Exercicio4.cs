@@ -7,7 +7,7 @@ public class Exercicio4
         Console.Clear();
         List<decimal> notasAluno = new List<decimal>();
         Console.Write("Quantos alunos tem na turma? ");
-        int quantidadeAlunos = ValidarEntradaUsuario.LerOpcao();
+        int quantidadeAlunos = ValidarEntradaUsuario.LerQuantidadeDeAlunos();
         for (int i = 1; i <= quantidadeAlunos; i++)
         {
             Console.Write($"Digite a nota do aluno {i}: ");

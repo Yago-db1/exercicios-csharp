@@ -51,7 +51,7 @@ public class ValidarEntradaUsuario
             Console.Write("Digite um valor númerico: ");
         }
     }
-    public static int LerOpcao()
+    public static int LerQuantidadeDeAlunos()
     {
         while (true)
         {
