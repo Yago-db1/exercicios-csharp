@@ -20,7 +20,8 @@ public class OpcoesMenu
         Console.WriteLine("1 - Calculadora de IMC (Índice de Massa Corporal)");
         Console.WriteLine("2 - Classificação de IMC");
         Console.WriteLine("3 - Calculadora");
-        Console.WriteLine("4 - Para sair");
+        Console.WriteLine("4 - Análise de Notas de Alunos");
+        Console.WriteLine("5 - Para sair");
         Console.Write("Digite uma opção: ");
     }
 }
