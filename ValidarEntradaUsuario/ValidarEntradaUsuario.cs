@@ -75,4 +75,41 @@ public class ValidarEntradaUsuario
             Console.Write("Digite uma nota entre 0 e 10: ");
         }
     }
+    public static int LerOpcaoMenuJogoAdivinhacao()
+    {
+        while (true)
+        {
+            string entradaUsuario = Console.ReadLine()!;
+            if (int.TryParse(entradaUsuario, out int opcao) && opcao >= 0 && opcao <= 3)
+            {
+                return opcao;
+            }
+            Console.Write("Digite uma opção entre 1 e 3");
+        }
+    }
+    public static int LerChuteUsuario(int limiteMax)
+    {
+        while (true)
+        {
+            string entradaUsuario = Console.ReadLine()!;
+            if (int.TryParse(entradaUsuario, out int opcao) && opcao > 0 && opcao <= limiteMax)
+            {
+                return opcao;
+            }
+            Console.Write($"Digite uma opção entre 1 e {limiteMax}:  ");
+        }
+    }
+    public static string LerRespostaUsuario()
+    {
+        string resposta;
+        while (true)
+        {
+            resposta = Console.ReadLine()!;
+            if (resposta == "S" || resposta == "N")
+            {
+                return resposta;
+            }
+            Console.WriteLine("Entrada inválida! Digite apenas 'S' para sim ou 'N' para não.");
+        }
+    }
 }
