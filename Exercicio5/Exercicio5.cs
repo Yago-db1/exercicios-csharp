@@ -4,7 +4,6 @@ public class Exercicio5
 {
     public static void JogoAdivinhacao()
     {
-        string respostaUsuario;
         do
         {
             Console.Clear();
@@ -23,8 +22,7 @@ public class Exercicio5
                     break;
             }
             Console.Write("Deseja jogar novamente? (S/N): ");
-            respostaUsuario = ValidarEntradaUsuario.LerRespostaUsuario();
-        } while (respostaUsuario == "S");
+        } while (ValidarEntradaUsuario.LerRespostaUsuario() == "S");
         Console.WriteLine("Obrigado por jogar!");
     }
 }

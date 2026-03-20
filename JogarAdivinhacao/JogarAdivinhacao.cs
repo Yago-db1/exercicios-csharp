@@ -17,7 +17,9 @@ class JogarAdivinhacao
                 Console.WriteLine($"Parabéns! Você acertou em {tentativasUsuario} tentativas!");
                 return;
             }
-            string mensagem = chute < numeroSecreto ? $"O número é MAIOR que {chute}" : $"O número é MENOR que {chute}";
+            string mensagem = chute < numeroSecreto
+                ? $"O número é MAIOR que {chute}"
+                 : $"O número é MENOR que {chute}";
             Console.WriteLine(mensagem);
             tentativasUsuario++;
         }
