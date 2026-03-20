@@ -20,6 +20,9 @@ switch (opcaoMenu)
         Exercicio4.NotaAluno();
         break;
     case 5:
+        Exercicio5.JogoAdivinhacao();
+        break;
+    case 6:
         Console.WriteLine("Saindo...");
         break;
 }
